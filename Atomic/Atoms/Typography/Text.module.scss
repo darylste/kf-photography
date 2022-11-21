@@ -1,0 +1,54 @@
+@import '../../../styles/variables.module.scss';
+
+.h1 {
+  font-size: 3.375rem;
+  font-weight: $font-weight-semi-bold;
+  line-height: 4.625rem;
+}
+
+.h2 {
+  font-size: 3rem;
+  font-weight: $font-weight-semi-bold;
+  line-height: 4rem;
+}
+
+.h3 {
+  font-size: 2.375rem;
+  font-weight: $font-weight-semi-bold;
+  line-height: 3.5rem;
+}
+
+.h4 {
+  font-size: 2.25rem;
+  font-weight: $font-weight-medium;
+  line-height: 3.5rem;
+}
+
+.h5 {
+  font-size: 2rem;
+  font-weight: $font-weight-medium;
+  line-height: 3rem;
+}
+
+.h6 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-medium;
+  line-height: 2.25rem;
+}
+
+.body1 {
+  font-size: 1.125rem;
+}
+
+.body2 {
+  font-weight: $font-weight-medium;
+}
+
+.label1 {
+  font-weight: $font-weight-medium;
+  line-height: 2rem;
+}
+
+.label2 {
+  font-weight: $font-weight-medium;
+}

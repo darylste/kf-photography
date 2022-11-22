@@ -1,7 +1,9 @@
 import { Button, Spacer, Text } from 'Atomic/Atoms';
+import Image from 'next/image';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
+import photographer from '../../../public/assets/photographer.webp';
 import styles from './HeroSection.module.scss';
 
 const HeroSection: React.FC = () => {
@@ -42,7 +44,16 @@ const HeroSection: React.FC = () => {
           View Pricing <BsArrowRight size={28.5} />
         </Button>
       </div>
-      <div className={styles.right}></div>
+      <div className={styles.right}>
+        <div className={styles.imgContainer}>
+          <Image
+            src={photographer}
+            alt='photographger'
+            fill
+            objectFit='cover'
+          />
+        </div>
+      </div>
     </section>
   );
 };

@@ -1,5 +1,9 @@
 @import './variables.module.scss';
 
+:root {
+  --swiper-theme-color: #612940 !important;
+}
+
 *,
 *:before,
 *:after {

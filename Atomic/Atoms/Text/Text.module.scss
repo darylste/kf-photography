@@ -38,10 +38,12 @@
 
 .body1 {
   font-size: 1.125rem;
+  opacity: 0.7;
 }
 
 .body2 {
   font-weight: $font-weight-medium;
+  opacity: 0.7;
 }
 
 .label1 {
@@ -51,4 +53,8 @@
 
 .label2 {
   font-weight: $font-weight-medium;
+}
+
+.white {
+  color: $color-white;
 }

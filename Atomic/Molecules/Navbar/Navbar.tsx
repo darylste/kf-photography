@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <Button
           varient='cta'
           color='outline'
-          href='/'
+          href='/contact'
         >
           Contact us
         </Button>

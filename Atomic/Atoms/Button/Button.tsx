@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type ButtonVarient = 'cta' | 'secondary';
-type Color = 'outline' | 'fill' | 'black' | 'white';
+type Color = 'primary' | 'outline' | 'fill' | 'black' | 'white';
 
 interface IButtonProps {
   children: React.ReactNode;

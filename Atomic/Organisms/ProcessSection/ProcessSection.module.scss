@@ -1,0 +1,47 @@
+@import '@styles/variables.module.scss';
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-2xl;
+  padding: $spacing-2xl $spacing-3xl;
+  background-color: $color-primary-accent;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.stepNum {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  background-color: $color-primary;
+  width: $spacing-md;
+  height: $spacing-md;
+  border-radius: $spacing-3xs;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: $spacing-2xs;
+    height: $spacing-2xs;
+    background-color: $color-secondary;
+    border-radius: 0 0 0 $spacing-3xs;
+    clip-path: polygon(
+      60% 0%,
+      60% 40%,
+      100% 40%,
+      100% 100%,
+      0% 100%,
+      0% 40%,
+      0% 0%
+    );
+  }
+}

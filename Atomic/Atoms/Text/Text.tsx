@@ -12,7 +12,8 @@ type FontVarient =
   | 'body1'
   | 'body2'
   | 'label1'
-  | 'label2';
+  | 'label2'
+  | 'label3';
 
 interface ITextProps {
   children: React.ReactNode;
@@ -42,6 +43,8 @@ const Text: React.FC<ITextProps> = ({ children, varient, color = 'black' }) => {
       return <p className={`${styles.lable1} ${styles[color]}`}>{children}</p>;
     case 'label2':
       return <p className={`${styles.label2} ${styles[color]}`}>{children}</p>;
+    case 'label3':
+      return <p className={`${styles.label3} ${styles[color]}`}>{children}</p>;
   }
 };
 

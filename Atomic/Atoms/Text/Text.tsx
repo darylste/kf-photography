@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Text.module.scss';
 
-type font =
+type FontVarient =
   | 'h1'
   | 'h2'
   | 'h3'
@@ -16,7 +16,7 @@ type font =
 
 interface ITextProps {
   children: React.ReactNode;
-  varient: font;
+  varient: FontVarient;
 }
 
 const Text: React.FC<ITextProps> = ({ children, varient }) => {

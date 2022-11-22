@@ -4,4 +4,5 @@ export {
   CollectionsSection,
   HeroSection,
   ProcessSection,
+  ReviewSection,
 } from './Organisms/index';

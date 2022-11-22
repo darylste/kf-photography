@@ -1,0 +1,27 @@
+@import '@styles/variables.module.scss';
+
+.carouselItem {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.userPicture {
+  position: relative;
+  width: $spacing-md;
+  height: $spacing-md;
+  border-radius: $spacing-lg;
+  overflow: hidden;
+  margin-right: $spacing-3xs;
+}

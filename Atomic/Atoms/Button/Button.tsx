@@ -3,19 +3,19 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type ButtonVarient = 'cta' | 'secondary';
-type Color = 'outline' | 'secondary';
+type Color = 'outline' | 'fill' | 'black' | 'white';
 
 interface IButtonProps {
   children: React.ReactNode;
   varient: ButtonVarient;
-  color?: Color;
+  color: Color;
   href: string;
 }
 
 const Button: React.FC<IButtonProps> = ({
   children,
   varient,
-  color = 'secondary',
+  color = 'none',
   href,
 }) => {
   return (

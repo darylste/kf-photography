@@ -5,7 +5,11 @@
   border-radius: 40px;
 }
 
-.simple {
+.secondary {
+  display: inline-flex;
+  & > * {
+    margin-left: $spacing-3xs;
+  }
 }
 
 .outline {
@@ -17,6 +21,10 @@
   }
 }
 
-.secondary {
+.fill {
   background-color: $color-secondary;
+}
+
+.white {
+  color: $color-white;
 }

@@ -1,0 +1,41 @@
+@import '@styles/variables.module.scss';
+
+.navbar,
+.nav,
+.navList {
+  display: flex;
+}
+
+.navbar {
+  background-color: $color-primary-tint;
+  color: $color-white;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm $spacing-3xl;
+}
+
+.nav {
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  color: $color-grey;
+  margin-right: $spacing-md;
+}
+
+.navItem {
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: $spacing-sm;
+  }
+
+  &:hover {
+    color: $color-primary-accent;
+  }
+}
+
+.active {
+  color: $color-white;
+}

@@ -1,0 +1,22 @@
+@import '@styles/variables.module.scss';
+
+.cta {
+  padding: $spacing-2xs $spacing-md;
+  border-radius: 40px;
+}
+
+.simple {
+}
+
+.outline {
+  border: 1px solid $color-grey;
+
+  &:hover {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+}
+
+.secondary {
+  background-color: $color-secondary;
+}

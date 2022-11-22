@@ -1,7 +1,7 @@
+import { Navbar } from '@atomic';
+import styles from '@styles/Home.module.scss';
 import Head from 'next/head';
 import React from 'react';
-
-import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
           content='Kirsty Ferris Photography offers family, baby and event photography in Glasgow.'
         />
       </Head>
+      <Navbar />
       <p>Home Page</p>
     </div>
   );

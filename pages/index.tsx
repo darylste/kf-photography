@@ -1,4 +1,4 @@
-import { HeroSection, Navbar } from '@atomic';
+import { HeroSection, Navbar, ProcessSection } from '@atomic';
 import styles from '@styles/Home.module.scss';
 import Head from 'next/head';
 import React from 'react';
@@ -15,6 +15,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <HeroSection />
+      <ProcessSection />
     </div>
   );
 }

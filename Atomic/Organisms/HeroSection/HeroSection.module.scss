@@ -1,10 +1,10 @@
 @import '@styles/variables.module.scss';
+@import '@styles/mixins.module.scss';
 
 .section {
-  display: grid;
+  @include grid2Col;
+  @include sectionSpacing;
   background-color: $color-primary-tint;
-  grid-template-columns: repeat(2, 1fr);
-  padding: $spacing-2xl $spacing-3xl;
 }
 
 .btnIcon {

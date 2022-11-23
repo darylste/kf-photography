@@ -1,9 +1,10 @@
-export { Button, Text } from './Atoms/index';
-export { Navbar } from './Molecules/index';
+export { Button, Logo, Spacer, Text } from './Atoms/index';
+export { NavList } from './Molecules/index';
 export {
   CollectionsSection,
   Footer,
   HeroSection,
+  Navbar,
   ProcessSection,
   ReviewSection,
 } from './Organisms/index';

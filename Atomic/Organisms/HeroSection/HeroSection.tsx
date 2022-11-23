@@ -3,10 +3,27 @@ import Image from 'next/image';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
-import photographer from '../../../public/assets/photographer.webp';
 import styles from './HeroSection.module.scss';
 
-const HeroSection: React.FC = () => {
+interface IHeroSectionProps {
+  title: string;
+  text: string;
+  ctaBtnText: string;
+  ctaBtnUrl: string;
+  secondaryBtnText: string;
+  secondaryBtnUrl: string;
+  img: string;
+}
+
+const HeroSection: React.FC<IHeroSectionProps> = ({
+  title,
+  text,
+  ctaBtnText,
+  ctaBtnUrl,
+  secondaryBtnText,
+  secondaryBtnUrl,
+  img,
+}) => {
   return (
     <section className={styles.section}>
       <div className={styles.left}>
@@ -14,7 +31,7 @@ const HeroSection: React.FC = () => {
           varient='h1'
           color='white'
         >
-          Capturing memories that will last a lifetime.
+          {title}
         </Text>
         <Spacer
           top='xs'
@@ -24,33 +41,34 @@ const HeroSection: React.FC = () => {
             varient='body2'
             color='white'
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            {text}
           </Text>
         </Spacer>
         <Button
           varient='cta'
           color='fill'
-          href='/gallery'
+          href={ctaBtnUrl}
         >
-          View my work
+          {ctaBtnText}
         </Button>
         <Spacer right='sm' />
         <Button
           varient='secondary'
           color='white'
-          href='/pricing'
+          href={secondaryBtnUrl}
         >
-          View Pricing <BsArrowRight size={28.5} />
+          {secondaryBtnText}
+          <BsArrowRight size={28.5} />
         </Button>
       </div>
       <div className={styles.right}>
         <div className={styles.imgContainer}>
           <Image
-            src={photographer}
+            src={img}
             alt='photographger'
             fill
-            objectFit='cover'
+            style={{ objectFit: 'cover' }}
+            priority
           />
         </div>
       </div>

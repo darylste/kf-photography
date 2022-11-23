@@ -1,21 +1,15 @@
-import { Text } from 'Atomic/Atoms';
+import { Text } from '@atomic';
+import { navItem } from '@types';
 import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import styles from './Navigation.module.scss';
-
-interface navItem {
-  name: String;
-  url: String;
-}
-
-type navItems = navItem[];
+import styles from './NavList.module.scss';
 
 interface INavigationProps {
   background: 'dark' | 'light';
-  items: navItems;
+  items: navItem[];
 }
 
 const Navigation: React.FC<INavigationProps> = ({ background, items }) => {

@@ -1,15 +1,15 @@
 @import '@styles/variables.module.scss';
+@import '@styles/mixins.module.scss';
 
 .swiper-button-prev {
   --swiper-theme-color: #000;
 }
 
 .section {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  @include sectionSpacing;
+  @include grid2Col;
   gap: $spacing-2xl;
   background-color: $color-primary-accent;
-  padding: $spacing-2xl $spacing-3xl;
 }
 
 .right {

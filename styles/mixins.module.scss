@@ -1,0 +1,19 @@
+@mixin sectionSpacing {
+  padding: $spacing-2xl 10vw;
+}
+
+@mixin grid2Col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin grid3Col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,14 +1,11 @@
 @import '@styles/variables.module.scss';
-
-.footer {
-}
+@import '@styles/mixins.module.scss';
 
 .main {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include grid2Col;
+  @include sectionSpacing;
   background-color: $color-primary-tint;
-  padding: $spacing-2xl $spacing-3xl;
 }
 
 .left {
@@ -16,13 +13,12 @@
 }
 
 .banner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0 $spacing-sm;
   position: absolute;
   bottom: 0;
-  background-color: $color-secondary;
+  @include grid2Col;
+  gap: 0 $spacing-sm;
   padding: $spacing-sm $spacing-md;
+  background-color: $color-secondary;
 }
 
 .socialIcons {

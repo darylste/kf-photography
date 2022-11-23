@@ -1,5 +1,6 @@
 import {
   CollectionsSection,
+  Footer,
   HeroSection,
   Navbar,
   ProcessSection,
@@ -24,6 +25,7 @@ export default function Home() {
       <ProcessSection />
       <CollectionsSection />
       <ReviewSection />
+      <Footer />
     </div>
   );
 }

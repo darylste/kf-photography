@@ -1,0 +1,49 @@
+@import '@styles/variables.module.scss';
+
+.footer {
+}
+
+.main {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $color-primary-tint;
+  padding: $spacing-2xl $spacing-3xl;
+}
+
+.left {
+  padding-right: $spacing-2xl;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 $spacing-sm;
+  position: absolute;
+  bottom: 0;
+  background-color: $color-secondary;
+  padding: $spacing-sm $spacing-md;
+}
+
+.socialIcons {
+  & > * {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  :not(:last-of-type) {
+    margin-right: $spacing-xs;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-sm 10vw;
+}

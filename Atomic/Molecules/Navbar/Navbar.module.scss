@@ -1,8 +1,7 @@
 @import '@styles/variables.module.scss';
 
 .navbar,
-.nav,
-.navList {
+.nav {
   display: flex;
 }
 
@@ -16,30 +15,4 @@
 
 .nav {
   align-items: center;
-}
-
-.navList {
-  list-style: none;
-  color: $color-grey;
-  margin-right: $spacing-md;
-}
-
-.navItem {
-  cursor: pointer;
-
-  & > * {
-    opacity: 1;
-  }
-
-  &:not(:last-child) {
-    margin-right: $spacing-sm;
-  }
-
-  &:hover {
-    color: $color-primary-accent;
-  }
-}
-
-.active {
-  color: $color-white;
 }

@@ -40,7 +40,7 @@ const Text: React.FC<ITextProps> = ({ children, varient, color = 'black' }) => {
     case 'body2':
       return <p className={`${styles.body2} ${styles[color]}`}>{children}</p>;
     case 'label1':
-      return <p className={`${styles.lable1} ${styles[color]}`}>{children}</p>;
+      return <p className={`${styles.label1} ${styles[color]}`}>{children}</p>;
     case 'label2':
       return <p className={`${styles.label2} ${styles[color]}`}>{children}</p>;
     case 'label3':

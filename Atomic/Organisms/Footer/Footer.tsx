@@ -1,6 +1,4 @@
-import { Spacer, Text } from 'Atomic/Atoms';
-import { Navigation } from 'Atomic/Molecules';
-// import { Navigation } from 'Atomic/Molecules';
+import { NavList, Spacer, Text } from '@atomic';
 import Link from 'next/link';
 import React from 'react';
 import { BsFacebook, BsInstagram } from 'react-icons/bs';
@@ -83,7 +81,7 @@ const Footer: React.FC = () => {
         <Text varient='body2'>
           Copyright 2022 &#169;Kirsty Ferris Photography
         </Text>
-        <Navigation
+        <NavList
           background='light'
           items={navItems}
         />

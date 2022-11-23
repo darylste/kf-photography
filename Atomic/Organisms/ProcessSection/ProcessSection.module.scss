@@ -3,7 +3,7 @@
 
 .section {
   @include sectionSpacing;
-  @include grid2Col;
+  @include grid3Col;
   gap: $spacing-2xl;
 
   background-color: $color-primary-accent;
@@ -11,12 +11,16 @@
 
 .right {
   @include grid2Col;
+  grid-column-start: 2;
+  grid-column-end: 4;
+
   gap: $spacing-md;
 }
 
 .stepNum {
   position: relative;
   @include flexCenter;
+
   color: $color-white;
   background-color: $color-primary;
   width: $spacing-md;

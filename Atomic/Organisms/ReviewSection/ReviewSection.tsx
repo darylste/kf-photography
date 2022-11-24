@@ -3,6 +3,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Review, Spacer, Text } from '@atomic';
+import { IReviewProps } from '@types';
 import cn from 'classnames';
 import React, { useRef, useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
@@ -11,14 +12,17 @@ import { Swiper as SwiperCore } from 'swiper/types';
 
 import styles from './ReviewSection.module.scss';
 
-const reviewProps = {
-  text: "The best agency we've worked with so far. They understand our product and are able to add new features with a great focus",
-  authorName: 'Luana Peixoto',
-  authorImg:
-    'https://raw.githubusercontent.com/darylste/kf-photography/dc63d21424f69ef98ebbcc587b38e6e913426331/public/assets/random-user.jpeg',
-};
+interface IReviewSectionProps {
+  title: string;
+  text: string;
+  reviews: IReviewProps[];
+}
 
-const ReviewSection: React.FC = () => {
+const ReviewSection: React.FC<IReviewSectionProps> = ({
+  title,
+  text,
+  reviews,
+}) => {
   const swiperRef = useRef<SwiperCore>();
 
   const [isPrevActive, setIsPrevAcvtive] = useState(false);
@@ -29,10 +33,8 @@ const ReviewSection: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.left}>
-        <Text varient='h3'>What our clients say about us</Text>
-        <Text varient='body1'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
-        </Text>
+        <Text varient='h3'>{title}</Text>
+        <Text varient='body1'>{text}</Text>
       </div>
       <div className={styles.right}>
         <Swiper
@@ -57,17 +59,11 @@ const ReviewSection: React.FC = () => {
           }}
           onBeforeInit={swiper => (swiperRef.current = swiper)}
         >
-          <SwiperSlide>
-            <Review {...reviewProps} />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <Review {...reviewProps} />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <Review {...reviewProps} />
-          </SwiperSlide>
+          {reviews.map((review, i) => (
+            <SwiperSlide key={i}>
+              <Review {...review} />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div className={styles.carouselControls}>
           <div

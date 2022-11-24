@@ -111,6 +111,31 @@ const collectionSectionProps = {
     },
   ],
 };
+
+const reviewSectionProps = {
+  title: 'What our clients say',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+  reviews: [
+    {
+      text: "The best agency we've worked with so far. They understand our product and are able to add new features with a great focus",
+      authorName: 'Luana Peixoto',
+      authorImg:
+        'https://raw.githubusercontent.com/darylste/kf-photography/dc63d21424f69ef98ebbcc587b38e6e913426331/public/assets/random-user.jpeg',
+    },
+    {
+      text: "The best agency we've worked with so far. They understand our product and are able to add new features with a great focus",
+      authorName: 'Luana Peixoto',
+      authorImg:
+        'https://raw.githubusercontent.com/darylste/kf-photography/dc63d21424f69ef98ebbcc587b38e6e913426331/public/assets/random-user.jpeg',
+    },
+    {
+      text: "The best agency we've worked with so far. They understand our product and are able to add new features with a great focus",
+      authorName: 'Luana Peixoto',
+      authorImg:
+        'https://raw.githubusercontent.com/darylste/kf-photography/dc63d21424f69ef98ebbcc587b38e6e913426331/public/assets/random-user.jpeg',
+    },
+  ],
+};
 // ##### DUMMY DATA #####
 
 export default function Home() {
@@ -127,7 +152,7 @@ export default function Home() {
       <HeroSection {...heroSectionProps} />
       <ProcessSection {...processSectionProps} />
       <CollectionsSection {...collectionSectionProps} />
-      <ReviewSection />
+      <ReviewSection {...reviewSectionProps} />
       <Footer />
     </div>
   );

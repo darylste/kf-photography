@@ -1,17 +1,10 @@
-import { Button, Spacer, Text } from 'Atomic/Atoms';
-import Image from 'next/image';
+import { Button, Spacer, Text } from '@atomic';
+import { ICollectionProps } from '@types';
+import Collection from 'Atomic/Molecules/Collection/Collection';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './CollectionsSection.module.scss';
-
-interface ICollectionProps {
-  title: string;
-  date: string;
-  imgUrl: string;
-  imgAlt: string;
-}
-
 interface ICollectionSectionProps {
   title: string;
   btnText: string;
@@ -41,21 +34,11 @@ const CollectionsSection: React.FC<ICollectionSectionProps> = ({
       <Spacer top='lg' />
       <div className={styles.grid}>
         {collections.map((collection, i) => (
-          <div
-            className={styles.collection}
+          <Collection
             key={i}
-          >
-            <Image
-              src={collection.imgUrl}
-              alt={`${collection.imgAlt}`}
-              fill
-              objectFit='cover'
-            />
-            <div className={styles.cardText}>
-              <Text varient='h6'>{collection.title}</Text>
-              <Text varient='label2'>{collection.date}</Text>
-            </div>
-          </div>
+            {...collection}
+            i={i}
+          />
         ))}
       </div>
     </section>

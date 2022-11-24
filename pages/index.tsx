@@ -50,7 +50,7 @@ const processSectionProps = {
         'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
     },
     {
-      stepTitle: 'Have a stress free day',
+      stepTitle: 'Enjoy your day',
       stepText:
         'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
     },

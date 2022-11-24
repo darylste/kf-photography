@@ -15,6 +15,7 @@
 .banner {
   position: absolute;
   bottom: 0;
+  max-width: 40%;
   @include grid2Col;
   gap: 0 $spacing-sm;
   padding: $spacing-sm $spacing-md;

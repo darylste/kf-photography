@@ -1,13 +1,10 @@
-import { Button, Spacer, Text } from 'Atomic/Atoms';
+import { Button, Spacer, Text } from '@atomic';
+import { IProcessStep } from '@types';
+import ProcessStep from 'Atomic/Molecules/ProcessStep/ProcessStep';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './ProcessSection.module.scss';
-
-interface IProcessStep {
-  stepTitle: string;
-  stepText: string;
-}
 
 interface IProcessSectionProps {
   title: string;
@@ -45,19 +42,12 @@ const ProcessSection: React.FC<IProcessSectionProps> = ({
       </div>
       <div className={styles.right}>
         {processSteps.map((step, i) => (
-          <div
-            className='stage'
+          <ProcessStep
+            stepTitle={step.stepTitle}
+            stepText={step.stepText}
+            i={i}
             key={i}
-          >
-            <div className={styles.stepNum}>0{i + 1}</div>
-            <Spacer
-              top='2xs'
-              bottom='3xs'
-            >
-              <Text varient='h5'>{step.stepTitle}</Text>
-            </Spacer>
-            <Text varient='body1'>{step.stepText}</Text>
-          </div>
+          />
         ))}
       </div>
     </section>

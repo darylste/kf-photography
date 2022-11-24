@@ -14,36 +14,3 @@
   @include grid3Col;
   gap: $spacing-2xs;
 }
-
-.collection {
-  width: 100%;
-  background-color: $color-primary-accent;
-  position: relative;
-  height: 400px;
-  cursor: pointer;
-  box-shadow: rgba($color-grey, 0.8) 0px 8px 24px;
-
-  &:hover {
-    > * {
-      background-color: rgba($color-primary-accent, 0.8);
-    }
-  }
-
-  &:active {
-    > * {
-      background-color: rgba($color-primary-accent, 1);
-    }
-  }
-}
-
-.cardText {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba($color-primary-accent, 0.6);
-  width: 100%;
-  padding: $spacing-2xs $spacing-3xs;
-
-  & > :last-child {
-    text-align: right;
-  }
-}

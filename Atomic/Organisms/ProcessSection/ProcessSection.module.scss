@@ -16,34 +16,3 @@
 
   gap: $spacing-md;
 }
-
-.stepNum {
-  position: relative;
-  @include flexCenter;
-
-  color: $color-white;
-  background-color: $color-primary;
-  width: $spacing-md;
-  height: $spacing-md;
-  border-radius: $spacing-3xs;
-
-  &::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: $spacing-2xs;
-    height: $spacing-2xs;
-    background-color: $color-secondary;
-    border-radius: 0 0 0 $spacing-3xs;
-    clip-path: polygon(
-      60% 0%,
-      60% 40%,
-      100% 40%,
-      100% 100%,
-      0% 100%,
-      0% 40%,
-      0% 0%
-    );
-  }
-}

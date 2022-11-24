@@ -1,14 +1,9 @@
-import { Spacer, Text } from 'Atomic/Atoms';
+import { Spacer, Text } from '@atomic';
+import { IReviewProps } from '@types';
 import Image from 'next/image';
 import React from 'react';
 
 import styles from './Review.module.scss';
-
-interface IReviewProps {
-  text: string;
-  authorName: string;
-  authorImg: string;
-}
 
 const Review: React.FC<IReviewProps> = ({ text, authorName, authorImg }) => {
   return (

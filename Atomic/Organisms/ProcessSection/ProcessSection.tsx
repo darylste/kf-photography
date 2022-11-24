@@ -4,84 +4,61 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './ProcessSection.module.scss';
 
-const ProcessSection: React.FC = () => {
+interface processStep {
+  stepTitle: string;
+  stepText: string;
+}
+
+interface IProcessSectionProps {
+  title: string;
+  text: string;
+  btnText: string;
+  btnUrl: string;
+  processSteps: processStep[];
+}
+
+const ProcessSection: React.FC<IProcessSectionProps> = ({
+  title,
+  text,
+  btnText,
+  btnUrl,
+  processSteps,
+}) => {
   return (
     <section className={styles.section}>
       <div className='left'>
-        <Text varient='h2'>How it works</Text>
+        <Text varient='h2'>{title}</Text>
         <Spacer
           top='2xs'
           bottom='2xs'
         >
-          <Text varient='body1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
-          </Text>
+          <Text varient='body1'>{text}</Text>
         </Spacer>
         <Button
           varient='secondary'
           color='primary'
-          href='/contact'
+          href={`${btnUrl}`}
         >
-          Book your photoshoot <BsArrowRight size={28.5} />
+          {btnText}
+          <BsArrowRight size={28.5} />
         </Button>
       </div>
       <div className={styles.right}>
-        <div className='stage'>
-          <div className={styles.stepNum}>01</div>
-          <Spacer
-            top='2xs'
-            bottom='3xs'
+        {processSteps.map((step, i) => (
+          <div
+            className='stage'
+            key={i}
           >
-            <Text varient='h5'>Create a package</Text>
-          </Spacer>
-          <Text varient='body1'>
-            Euismod faucibus turpis eu gravida mi. Pellentesque et velit
-            aliquam.
-          </Text>
-        </div>
-
-        <div className='stage'>
-          <div className={styles.stepNum}>02</div>
-          <Spacer
-            top='2xs'
-            bottom='3xs'
-          >
-            <Text varient='h5'>Reserve your date</Text>
-          </Spacer>
-          <Text varient='body1'>
-            Euismod faucibus turpis eu gravida mi. Pellentesque et velit
-            aliquam.
-          </Text>
-        </div>
-
-        <div className='stage'>
-          <div className={styles.stepNum}>03</div>
-          <Spacer
-            top='2xs'
-            bottom='3xs'
-          >
-            <Text varient='h5'>Enjoy your day</Text>
-          </Spacer>
-          <Text varient='body1'>
-            Euismod faucibus turpis eu gravida mi. Pellentesque et velit
-            aliquam.
-          </Text>
-        </div>
-
-        <div className='stage'>
-          <div className={styles.stepNum}>04</div>
-          <Spacer
-            top='2xs'
-            bottom='3xs'
-          >
-            <Text varient='h5'>Recieve photos</Text>
-          </Spacer>
-          <Text varient='body1'>
-            Euismod faucibus turpis eu gravida mi. Pellentesque et velit
-            aliquam.
-          </Text>
-        </div>
+            <div className={styles.stepNum}>0{i + 1}</div>
+            <Spacer
+              top='2xs'
+              bottom='3xs'
+            >
+              <Text varient='h5'>{step.stepTitle}</Text>
+            </Spacer>
+            <Text varient='body1'>{step.stepText}</Text>
+          </div>
+        ))}
       </div>
     </section>
   );

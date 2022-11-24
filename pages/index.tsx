@@ -32,6 +32,35 @@ const heroSectionProps = {
   secondaryBtnUrl: '/pricing',
   img: 'https://raw.githubusercontent.com/darylste/kf-photography/d7ffda2cac0dc1324771d647a2006a835d324163/public/assets/photographer.webp',
 };
+
+const ProcessSectionProps = {
+  title: 'How we work',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  btnText: 'Book your photoshoot',
+  btnUrl: '/contact',
+  processSteps: [
+    {
+      stepTitle: 'Create a package',
+      stepText:
+        'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
+    },
+    {
+      stepTitle: 'Reserve your date',
+      stepText:
+        'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
+    },
+    {
+      stepTitle: 'Have a stress free day',
+      stepText:
+        'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
+    },
+    {
+      stepTitle: 'Recieve your photos',
+      stepText:
+        'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
+    },
+  ],
+};
 // ##### DUMMY DATA #####
 
 export default function Home() {
@@ -46,7 +75,7 @@ export default function Home() {
       </Head>
       <Navbar {...navbarProps} />
       <HeroSection {...heroSectionProps} />
-      <ProcessSection />
+      <ProcessSection {...ProcessSectionProps} />
       <CollectionsSection />
       <ReviewSection />
       <Footer />

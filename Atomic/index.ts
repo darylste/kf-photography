@@ -1,5 +1,5 @@
 export { Button, Logo, Spacer, Text } from './Atoms/index';
-export { NavList } from './Molecules/index';
+export { NavList, Review } from './Molecules/index';
 export {
   CollectionsSection,
   Footer,

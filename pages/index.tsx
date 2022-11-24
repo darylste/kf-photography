@@ -50,7 +50,7 @@ const processSectionProps = {
         'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
     },
     {
-      stepTitle: 'Have a stress free day',
+      stepTitle: 'Enjoy the day',
       stepText:
         'Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam.',
     },
@@ -136,6 +136,26 @@ const reviewSectionProps = {
     },
   ],
 };
+
+const footerProps = {
+  title: "Let's talk!",
+  mainText:
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptates, quidem iste mollitia deleniti ut.',
+  sideText:
+    'We are always open to discuss your project and improve your online presence.',
+  facebookUrl: 'https://www.facebook.com',
+  instagramUrl: 'https://www.instagram.com',
+  emailAddress: 'kfphotography@gmail.com',
+  phoneNumber: '07359 073096',
+  navItems: [
+    { name: 'Home', url: '/' },
+    { name: 'About us', url: '/about' },
+    { name: 'Features', url: '/features' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'FAQ', url: '/faq' },
+  ],
+};
+
 // ##### DUMMY DATA #####
 
 export default function Home() {
@@ -153,7 +173,7 @@ export default function Home() {
       <ProcessSection {...processSectionProps} />
       <CollectionsSection {...collectionSectionProps} />
       <ReviewSection {...reviewSectionProps} />
-      <Footer />
+      <Footer {...footerProps} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './ProcessSection.module.scss';
 
-interface processStep {
+interface IProcessStep {
   stepTitle: string;
   stepText: string;
 }
@@ -14,7 +14,7 @@ interface IProcessSectionProps {
   text: string;
   btnText: string;
   btnUrl: string;
-  processSteps: processStep[];
+  processSteps: IProcessStep[];
 }
 
 const ProcessSection: React.FC<IProcessSectionProps> = ({

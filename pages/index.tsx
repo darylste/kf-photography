@@ -155,6 +155,7 @@ const footerProps = {
     { name: 'FAQ', url: '/faq' },
   ],
 };
+
 // ##### DUMMY DATA #####
 
 export default function Home() {

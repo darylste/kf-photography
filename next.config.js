@@ -12,7 +12,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
-        port: '',
+        port: '0',
         pathname: '/darylste/kf-photography/**',
       },
     ],

@@ -41,11 +41,11 @@ const Footer: React.FC<IFooterProps> = ({
             {sideText}
           </Text>
           <div className={styles.banner}>
-            <Text varient='label1'>Email me at</Text>
-            <Text varient='label1'>Call me</Text>
+            <Text varient='label1'>Email me</Text>
             <Link href={`mailto:${emailAddress}`}>
               <Text varient='body1'>{emailAddress}</Text>
             </Link>
+            <Text varient='label1'>Call me</Text>
             <Link href={`tel:${phoneNumber}`}>
               <Text varient='body1'>{phoneNumber}</Text>
             </Link>

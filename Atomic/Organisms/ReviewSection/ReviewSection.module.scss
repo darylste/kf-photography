@@ -27,7 +27,6 @@
 
 .swiper {
   width: 600px;
-  height: 300px;
 }
 
 .carouselControls {
@@ -71,5 +70,23 @@
   &:hover {
     color: $color-grey;
     border: 1px solid $color-grey;
+  }
+}
+
+@media (max-width: 1125px) {
+  .section {
+    gap: $spacing-xl;
+  }
+}
+
+@media (max-width: 1085px) {
+  .left {
+    display: none;
+    visibility: hidden;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
   }
 }

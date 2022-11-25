@@ -1,4 +1,5 @@
 @import '@styles/variables.module.scss';
+@import '@styles/mixins.module.scss';
 
 .navbar,
 .nav {
@@ -10,7 +11,7 @@
   color: $color-white;
   justify-content: space-between;
   align-items: center;
-  padding: $spacing-sm $spacing-3xl;
+  @include navSpacing;
 }
 
 .nav {

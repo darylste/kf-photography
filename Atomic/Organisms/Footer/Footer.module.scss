@@ -44,3 +44,9 @@
   justify-content: space-between;
   padding: $spacing-sm 10vw;
 }
+
+@media (max-width: 1100px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+}

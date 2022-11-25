@@ -1,4 +1,5 @@
 @import '@styles/variables.module.scss';
+@import '@styles/mixins.module.scss';
 
 .navList {
   display: flex;
@@ -22,12 +23,8 @@
   }
 }
 
-.active {
-  color: $color-white;
-}
-
 .active.black {
-  color: $color-black;
+  color: $color-grey;
 }
 
 .black {
@@ -39,5 +36,77 @@
 
   &:active {
     filter: brightness(0.8);
+  }
+}
+
+.hamburgerIcon {
+  cursor: pointer;
+  display: none;
+  visibility: hidden;
+
+  &:hover {
+    filter: brightness(0.75);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: $color-primary-tint;
+
+  &Item {
+    color: $color-grey;
+
+    &:hover {
+      color: $color-primary-accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+.mobileTop {
+  position: fixed;
+  top: $spacing-sm;
+  right: 7.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.exitIcon {
+  margin-right: 5px;
+}
+
+.active {
+  color: $color-white;
+}
+
+@media (max-width: 725px) {
+  .navList {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hamburgerIcon {
+    display: unset;
+    visibility: unset;
   }
 }

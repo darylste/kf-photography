@@ -14,3 +14,17 @@
   @include grid3Col;
   gap: $spacing-2xs;
 }
+
+@media (max-width: 1000px) {
+  .grid {
+    @include grid2Col;
+    gap: $spacing-md;
+  }
+}
+
+@media (max-width: 750px) {
+  .grid {
+    @include grid2Col;
+    grid-template-columns: 1fr;
+  }
+}

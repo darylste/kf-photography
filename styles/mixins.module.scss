@@ -1,5 +1,15 @@
+@mixin navSpacing {
+  padding: $spacing-sm 10vw;
+  @media (max-width: 725px) {
+    padding: $spacing-sm 7.5vw;
+  }
+}
+
 @mixin sectionSpacing {
   padding: $spacing-2xl 10vw;
+  @media (max-width: 725px) {
+    padding: $spacing-xl 7.5vw;
+  }
 }
 
 @mixin grid2Col {
@@ -16,4 +26,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 725px) {
+  @mixin sectionSpacing {
+    padding: $spacing-xl 5vw;
+  }
 }

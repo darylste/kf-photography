@@ -16,3 +16,17 @@
 
   gap: $spacing-md;
 }
+
+@media (max-width: 1085px) {
+  .section {
+    display: block;
+  }
+
+  .left {
+    margin-bottom: $spacing-sm;
+  }
+
+  .right {
+    gap: $spacing-lg;
+  }
+}

@@ -13,7 +13,7 @@ interface IProcessStep {
 const ProcessStep: React.FC<IProcessStep> = ({ stepTitle, stepText, i }) => {
   return (
     <div
-      className='stage'
+      className={styles.step}
       key={i}
     >
       <div className={styles.stepNum}>0{i + 1}</div>

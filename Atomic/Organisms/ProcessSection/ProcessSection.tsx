@@ -23,7 +23,7 @@ const ProcessSection: React.FC<IProcessSectionProps> = ({
 }) => {
   return (
     <section className={styles.section}>
-      <div className='left'>
+      <div className={styles.left}>
         <Text varient='h2'>{title}</Text>
         <Spacer
           top='2xs'

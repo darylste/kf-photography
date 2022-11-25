@@ -37,7 +37,7 @@ const ProcessSection: React.FC<IProcessSectionProps> = ({
           href={`${btnUrl}`}
         >
           {btnText}
-          <BsArrowRight size={28.5} />
+          <BsArrowRight className='arrowIcon' />
         </Button>
       </div>
       <div className={styles.right}>

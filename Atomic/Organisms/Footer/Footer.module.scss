@@ -50,3 +50,20 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 525px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    display: none;
+    visibility: hidden;
+  }
+  .right {
+    text-align: center;
+  }
+  .banner {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -25,3 +25,13 @@
 .image {
   object-fit: cover;
 }
+
+@media (max-width: 600px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    display: none;
+    visibility: hidden;
+  }
+}

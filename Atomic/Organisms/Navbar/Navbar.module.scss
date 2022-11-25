@@ -17,3 +17,10 @@
 .nav {
   align-items: center;
 }
+
+@media (max-width: 725px) {
+  .button {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -21,6 +21,7 @@ const Navbar: React.FC<INavbarProps> = ({ navItems, btnText, btnUrl }) => {
         />
         <Spacer left='md' />
         <Button
+          className={styles.button}
           varient='cta'
           color='outline'
           href={btnUrl}

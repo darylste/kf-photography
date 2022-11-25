@@ -1,4 +1,4 @@
-import { Button, Spacer, Text } from '@atomic';
+import { Spacer, Text } from '@atomic';
 import { navItem } from '@types';
 import cn from 'classnames';
 import Image from 'next/image';
@@ -55,13 +55,6 @@ const Navigation: React.FC<INavigationProps> = ({ background, items }) => {
               alt={'exit icon'}
             />
             <Spacer left='md' />
-            <Button
-              varient='cta'
-              color='outline'
-              href={'/contact'}
-            >
-              {'Contact me'}
-            </Button>
           </div>
           <div className={styles.mobileMain}>
             {items.map((item, i) => {

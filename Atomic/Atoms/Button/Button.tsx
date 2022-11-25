@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import React from 'react';
 
 import styles from './Button.module.scss';
@@ -10,6 +11,7 @@ interface IButtonProps {
   varient: ButtonVarient;
   color: Color;
   href: string;
+  className?: string;
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -17,11 +19,17 @@ const Button: React.FC<IButtonProps> = ({
   varient,
   color = 'none',
   href,
+  className,
 }) => {
   return (
     <a
       href={href}
-      className={`${styles.btn} ${styles[varient]} ${styles[color]}`}
+      className={cn(
+        styles.btn,
+        styles[varient],
+        styles[color],
+        className && className,
+      )}
     >
       {children}
     </a>

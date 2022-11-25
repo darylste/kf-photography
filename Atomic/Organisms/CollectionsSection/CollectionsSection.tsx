@@ -28,7 +28,7 @@ const CollectionsSection: React.FC<ICollectionSectionProps> = ({
           href={`${btnUrl}`}
         >
           {btnText}
-          <BsArrowRight size={28.5} />
+          <BsArrowRight className='arrowIcon' />
         </Button>
       </div>
       <Spacer top='lg' />

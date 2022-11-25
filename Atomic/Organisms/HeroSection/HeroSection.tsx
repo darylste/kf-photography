@@ -58,7 +58,7 @@ const HeroSection: React.FC<IHeroSectionProps> = ({
           href={secondaryBtnUrl}
         >
           {secondaryBtnText}
-          <BsArrowRight size={28.5} />
+          <BsArrowRight className='arrowIcon' />
         </Button>
       </div>
       <div className={styles.right}>

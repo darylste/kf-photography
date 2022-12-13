@@ -1,0 +1,22 @@
+@import '@styles/variables.module.scss';
+
+.card {
+  background-color: $color-primary-accent;
+  padding: $spacing-lg $spacing-md;
+  border-radius: $spacing-2xs;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  list-style: none;
+  list-style-image: url('../../../public/assets/icons/check.svg');
+  list-style-position: inside;
+  flex: 1;
+
+  &Item {
+    &:not(:last-of-type) {
+      padding-bottom: $spacing-2xs;
+    }
+  }
+}

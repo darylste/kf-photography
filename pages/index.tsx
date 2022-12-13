@@ -1,8 +1,6 @@
 import {
   CollectionsSection,
-  Footer,
   HeroSection,
-  Navbar,
   ProcessSection,
   ReviewSection,
 } from '@atomic';
@@ -11,18 +9,6 @@ import Head from 'next/head';
 import React from 'react';
 
 // ##### DUMMY DATA #####
-const navbarProps = {
-  navItems: [
-    { name: 'Home', url: '/' },
-    { name: 'About us', url: '/about' },
-    { name: 'Features', url: '/features' },
-    { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
-  ],
-  btnText: 'Contact me',
-  btnUrl: '/contact',
-};
-
 const heroSectionProps = {
   title: 'Capturing memories that will last a lifetime.',
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
@@ -136,26 +122,6 @@ const reviewSectionProps = {
     },
   ],
 };
-
-const footerProps = {
-  title: "Let's talk!",
-  mainText:
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptates, quidem iste mollitia deleniti ut.',
-  sideText:
-    'We are always open to discuss your project and improve your online presence.',
-  facebookUrl: 'https://www.facebook.com',
-  instagramUrl: 'https://www.instagram.com',
-  emailAddress: 'kfphotography@gmail.com',
-  phoneNumber: '07359 073096',
-  navItems: [
-    { name: 'Home', url: '/' },
-    { name: 'About us', url: '/about' },
-    { name: 'Features', url: '/features' },
-    { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
-  ],
-};
-
 // ##### DUMMY DATA #####
 
 export default function Home() {
@@ -165,15 +131,21 @@ export default function Home() {
         <title>KF Photography</title>
         <meta
           name='description'
-          content='Kirsty Ferris Photography offers family, baby and event photography in Glasgow.'
+          content='Kirsty Ferris Photography is a Glasgow based family/events photographer. We can create the perfect package for you and capture memories that last a lifetime.'
+        />
+        <meta
+          name='author'
+          content='https://www.daryl-stensland.com/'
+        />
+        <meta
+          name='robots'
+          content='index, follow'
         />
       </Head>
-      <Navbar {...navbarProps} />
       <HeroSection {...heroSectionProps} />
       <ProcessSection {...processSectionProps} />
       <CollectionsSection {...collectionSectionProps} />
       <ReviewSection {...reviewSectionProps} />
-      <Footer {...footerProps} />
     </div>
   );
 }

@@ -3,10 +3,12 @@
 .cta {
   padding: $spacing-2xs $spacing-md;
   border-radius: 40px;
+  text-align: center;
 }
 
 .secondary {
   display: inline-flex;
+  text-align: center;
 
   & > * {
     margin-left: $spacing-3xs;
@@ -14,7 +16,9 @@
 }
 
 .outline {
-  border: 1px solid $color-grey;
+  background-color: $color-primary-tint;
+  color: $color-white;
+  border: 1px solid $color-white;
 
   &:hover {
     background-color: $color-primary;

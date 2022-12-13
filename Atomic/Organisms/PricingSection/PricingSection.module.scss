@@ -1,0 +1,19 @@
+@import '@styles/variables.module.scss';
+@import '@styles/mixins.module.scss';
+
+.section {
+  @include sectionSpacing;
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.textContainer {
+  @include flexCenter;
+  flex-direction: column;
+  width: 66%;
+}
+
+.cardContainer {
+  @include grid3Col;
+  gap: $spacing-sm;
+}

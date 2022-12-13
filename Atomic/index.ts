@@ -5,6 +5,7 @@ export {
   Footer,
   HeroSection,
   Navbar,
+  PricingSection,
   ProcessSection,
   ReviewSection,
 } from './Organisms/index';

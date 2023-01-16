@@ -41,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <main className={poppins.className}>
       <Navbar {...navbarProps} />
       <Component {...pageProps} />
+
       <Footer {...footerProps} />
     </main>
   );

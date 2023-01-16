@@ -14,10 +14,7 @@ const poppins = Poppins({
 const navbarProps = {
   navItems: [
     { name: 'Home', url: '/' },
-    { name: 'About us', url: '/about' },
-    { name: 'Features', url: '/features' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
   ],
   btnText: 'Contact me',
   btnUrl: '/contact',
@@ -35,10 +32,7 @@ const footerProps = {
   phoneNumber: '07359 073096',
   navItems: [
     { name: 'Home', url: '/' },
-    { name: 'About us', url: '/about' },
-    { name: 'Features', url: '/features' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
   ],
 };
 

@@ -15,6 +15,12 @@ const nextConfig = {
         port: '',
         pathname: '/darylste/kf-photography/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
